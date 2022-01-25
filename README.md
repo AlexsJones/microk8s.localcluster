@@ -15,4 +15,8 @@ _In this example we use a single control plane node - you can use as many as you
 ./launch.sh
 ```
 
+## Dependencies
+
+- Microk8s ( sudo snap install microk8s --classic )
+
 You can now emulate a generic kubernetes cluster with external load balancing.
