@@ -1,5 +1,7 @@
 # microk8s.localcluster
 
+![m](./images/index.png)
+
 A multi-node local microk8s example.
 This uses LXD and is designed to work on Ubuntu.
 
