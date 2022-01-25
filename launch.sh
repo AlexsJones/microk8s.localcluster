@@ -1,6 +1,7 @@
 #!/bin/sh
 ## Run a multi-node microk8s cluster with LXD
 microk8s start
+microk8s enable dns rbac storage metallb:192.168.64.50-192.168.64.100
 for i in {1..3}
 do
 workerToken=`microk8s.add-node | grep " --worker"`

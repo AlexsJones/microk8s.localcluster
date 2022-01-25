@@ -13,11 +13,6 @@ _In this example we use a single control plane node - you can use as many as you
 
 ```
 ./launch.sh
-# Install metallb loadbalancer ( optional )
-kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/namespace.yaml
-kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/metallb.yaml
-
-kubectl apply -f metallb.yaml ( optional config )
 ```
 
 You can now emulate a generic kubernetes cluster with external load balancing.
