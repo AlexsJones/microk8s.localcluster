@@ -20,4 +20,8 @@ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manif
 kubectl apply -f metallb.yaml ( optional config )
 ```
 
+## Dependencies
+
+- Microk8s ( sudo snap install microk8s --classic )
+
 You can now emulate a generic kubernetes cluster with external load balancing.
