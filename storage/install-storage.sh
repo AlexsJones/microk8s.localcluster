@@ -1,3 +1,4 @@
+alias kubectl="microk8s kubectl"
 kubectl create namespace mayastor
 kubectl apply -f https://raw.githubusercontent.com/openebs/mayastor-control-plane/master/deploy/operator-rbac.yaml
 kubectl apply -f https://raw.githubusercontent.com/openebs/mayastor-control-plane/master/deploy/mayastorpoolcrd.yaml
@@ -14,5 +15,4 @@ kubectl apply -f https://raw.githubusercontent.com/openebs/mayastor-control-plan
 kubectl apply -f https://raw.githubusercontent.com/openebs/mayastor-control-plane/master/deploy/msp-deployment.yaml
 kubectl apply -f https://raw.githubusercontent.com/openebs/mayastor/master/deploy/mayastor-daemonset.yaml
 
-kubectl scale --replicas=1 sts/mayastor-etcd -n mayastor
 kubectl scale --replicas=1 sts/nats -n mayastor
