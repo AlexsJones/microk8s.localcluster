@@ -19,9 +19,8 @@ _Labels nodes_
 ## Pre-installation
 
 Provisioning the loopback device storage
-- `dd if=/dev/zero of=loopbackfile.img bs=100M count=10`
+- `dd if=/dev/zero of=loopbackfile.img bs=1000M count=10`
 - `sudo losetup -fP loopbackfile.img`
-- `mkfs.ext4 loopbackfile.img`
 - Find the loop device 
 ```
 losetup -a | grep loopbackfile
@@ -32,9 +31,6 @@ losetup -a | grep loopbackfile
 - Check it out...
 ```
 df -hP /loopfs/
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/loop27     966M   24K  900M   1% /loopfs
-
 ```
 
 ## Installation
