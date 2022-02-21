@@ -15,6 +15,12 @@ _In this example we use a single control plane node - you can use as many as you
 ./launch.sh
 ```
 
+## Storage
+
+This project implements [mayastor](https://mayastor.gitbook.io/) driver from MayaData.
+
+Check out the steps [here](https://github.com/AlexsJones/microk8s.localcluster/blob/main/storage/README.md)
+
 ## Dependencies
 
 - Microk8s ( sudo snap install microk8s --classic )
