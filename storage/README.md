@@ -36,11 +36,12 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/loop27     966M   24K  900M   1% /loopfs
 
 ```
+
 ## Installation
 
 - `source ./install-storage.sh`
 - kubectl edit sts/mayastor-etcd and remove anti-affinity
-- Edit this to match your device name and your loop path `microk8s kubectl apply -f mayastorpool.yaml`
+- Edit this to match your device name and your loop path `microk8s kubectl apply -f mayastorpool.yaml` ( e.g. /dev/loop27 )
 - `microk8s kubectl apply -f storageclass.yaml`
 
 
