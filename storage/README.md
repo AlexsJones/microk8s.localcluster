@@ -1,4 +1,4 @@
-# storage
+# Mayastor Storage
 
 ## Prepage the cluster
 
