@@ -21,23 +21,21 @@ _Labels nodes_
 Provisioning the loopback device storage
 - `dd if=/dev/zero of=loopbackfile.img bs=1000M count=10`
 - `sudo losetup -fP loopbackfile.img`
-- Find the loop device 
 ```
 losetup -a | grep loopbackfile
 /dev/loop27: []: (/home/jonesax/microk8s.localcluster/storage/loopbackfile.img)
 ```
 - `mkdir /loopfs`
-- Mount device `sudo mount -o loop /dev/loop27 /loopfs`
-- Check it out...
+- Mount device against the loopback device `sudo mount -o loop /dev/loop27 /loopfs`
 ```
 df -hP /loopfs/
 ```
 
-## Installation
+## Installation
 
 - `source ./install-storage.sh`
 - kubectl edit sts/mayastor-etcd and remove anti-affinity
-- Edit this to match your device name and your loop path `microk8s kubectl apply -f mayastorpool.yaml` ( e.g. /dev/loop27 )
+- Edit this to match your device and your loop path `microk8s kubectl apply -f mayastorpool.yaml` ( e.g. /dev/loop27 )
 - `microk8s kubectl apply -f storageclass.yaml`
 
 
