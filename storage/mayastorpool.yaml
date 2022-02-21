@@ -6,12 +6,3 @@ metadata:
 spec:
   node: xps
   disks: ["/dev/loop26"]
----
-apiVersion: "openebs.io/v1alpha1"
-kind: MayastorPool
-metadata:
-  name: xps-local-1
-  namespace: mayastor
-spec:
-  node: xps
-  disks: ["/loopfs"]
